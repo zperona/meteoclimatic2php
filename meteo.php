@@ -319,7 +319,7 @@ print ($dpcp);
 <tr>
 <td style="border: 1px solid #dddddd;" align="center" valign="middle"><span style="font-size: 8pt;"><span style="font-family: tahoma,arial,helvetica,sans-serif;"><br /></span></span></td>
 <td style="border: 1px solid #dddddd;" align="center" valign="middle"><span style="font-size: 8pt;"><span style="font-family: tahoma,arial,helvetica,sans-serif;">Máx.</span></span></td>
-<td style="border: 1px solid #dddddd;" colspan="2" rowspan="4" align="center" valign="middle"><span style="font-size: 8pt;"><span style="font-family: tahoma,arial,helvetica,sans-serif;"><img src="./brujula.php" /><br /></span></span></td>
+<td style="border: 1px solid #dddddd;" colspan="2" rowspan="4" align="center" valign="middle"><span style="font-size: 8pt;"><span style="font-family: tahoma,arial,helvetica,sans-serif;"><img src="./windrose.php" /><br /></span></span></td>
 <td style="border: 1px solid #dddddd;" align="center" valign="middle"><span style="font-size: 8pt;"><span style="font-family: tahoma,arial,helvetica,sans-serif;"></span></span></td>
 <td style="border: 1px solid #dddddd;" align="center" valign="middle"><span style="font-size: 8pt;"><span style="font-family: tahoma,arial,helvetica,sans-serif;">Máx.<br /></span></span></td>
 <td colspan="3" rowspan="4" style="border: 1px solid #dddddd;" align="center" valign="middle"><span style="font-size: 8pt;"><span style="font-family: tahoma,arial,helvetica,sans-serif;">sin datos<br /></span></span></td>
