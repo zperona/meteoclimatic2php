@@ -1,5 +1,5 @@
 <?php
-//recopilamos datos del rumbo
+//fetching wind data
 $azi = file_get_contents('http://www.biolveg.uma.es/aero/weather/meteoclimatic.htm');
 $azi = explode("=",$azi);
 $azi = ($azi[7]);
@@ -12,12 +12,12 @@ $brujula = imagecreatetruecolor($altobru, $anchobru);
 
 imageantialias($brujula, TRUE);
 
-//Variables de la aguja
+//pointer size
 $largo = 21;
 $largo2 = 6;
 $ancho = 5;
 
-//Colores
+//Colors
 $blanco = imagecolorallocate($brujula, 255, 255, 255);
 $rojo = imagecolorallocate($brujula, 190, 0, 0);
 $rojo2 = imagecolorallocate($brujula, 255, 0, 0);
@@ -28,7 +28,7 @@ $gris4 = imagecolorallocate($brujula, 160, 160, 160);
 $azul = imagecolorallocate($brujula, 0, 128, 255);
 $azul2 = imagecolorallocate($brujula, 0, 102, 204);
 
-//Calculando angulos
+//angles 
 $a1 = 25 + cos(deg2rad($azi)) * $largo;
 $a2 = 25 + sin(deg2rad($azi)) * $largo;
 $a3 = 25 + cos(deg2rad($azi + 180)) * $largo2;
@@ -40,14 +40,14 @@ $b4 = 25 + sin(deg2rad($azi + 270)) * $ancho;
 $c1 = 25;
 $c2 = 25;
 
-//pintamos los poligonos de la base
+//Drawing the Rose
 
 imagefilledrectangle($brujula, 0, 0, 51, 51, $blanco);
 //imagefilledarc($brujula, 25, 25, 47, 47, 0, 359, $azul2, IMG_ARC_EDGED);
 //imagefilledarc($brujula, 25, 25, 43, 43, 0, 359, $blanco, IMG_ARC_EDGED);
 
 
-//Pol�gonos:
+//Polygons:
 $AA = array(0,25, 18,18, 32,32, 50,25);
 $AB = array(0,25, 18,32, 32,18, 50,25);
 $BA = array(18,18, 25,0, 25,25);
@@ -94,7 +94,7 @@ imagepolygon($brujula, $CB, 3, $gris2);
 imagepolygon($brujula, $BA, 3, $gris3);
 imagepolygon($brujula, $BB, 3, $gris4);
 
-//pintamos los poligonos de la aguja
+//Filling the polygons
 
 //1
 imagefilledpolygon($brujula, 
@@ -128,7 +128,7 @@ $b3,$b4,
 $c1,$c2),
 3,
 $azul);
-////////////////////////// Para que funcione el antialiasing:
+//////antialiasing:
 imagepolygon($brujula, 
 array (
 $a1,$a2,
